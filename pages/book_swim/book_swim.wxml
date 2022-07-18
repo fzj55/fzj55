@@ -1,0 +1,20 @@
+<view class="ns">
+    <image src="/img/back.png" bindtap="back"></image>
+<view style="margin-top: 10%;color: black; margin-left: 10px; font-weight: 500;font-size: medium;font-weight: 600;">游 泳 池</view>
+</view>
+<view class="ud_flex" wx:for="{{swim_list.detail}}" wx:key="id">
+<view class="au_box">
+<view class="au_box_left">
+<image src="/image/swim.png"></image>
+</view>
+<view class="au_box_right">
+<view style="font-size: 15px;">时间：</view>
+<view>{{item.time}}</view>
+<view style="font-size: 15px;">剩余量：{{item.ticket_num}}</view>
+<view style="height: 10%;"></view>
+<button style="height: 30% !important;background-color:#84a3cd ;text-align: center;"data-text="{{item.id}}"bindtap="submit">提交</button>
+</view>
+</view>
+</view>
+<view class="color">
+</view>

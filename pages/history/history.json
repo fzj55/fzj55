@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "css-animation":"/components/css-animation/index"
+  },
+  "navigationBarTitleText": "历史订单"
+}

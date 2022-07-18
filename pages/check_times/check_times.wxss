@@ -1,0 +1,99 @@
+/* pages/choose/choose.wxss */
+page{
+    height: 100%;
+}
+.ns {
+    width: 100%;
+    height: 15%;
+    text-align:center;
+    line-height: 155rpx; 
+    color: white;
+    font-weight:bold;
+    background:linear-gradient(to bottom, #4f75af, white);
+    display: flex;
+  }
+  .ns image{
+    margin-top: 5%;
+    height: 40rpx;
+    width: 40rpx;
+    position: fixed;
+    left: 20rpx;
+    top: 75rpx;
+}
+.login_container{
+    height:60% !important;
+    color:#3b5e8b;
+    font-weight: 500;
+    font-size: large;
+}
+.ud_flex{
+    margin-top: 3%;
+    height: 25%;
+    width: 90%;
+    margin-left:18px ;
+    border: #cdd2cb 3px solid;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.time{
+    height:15%;
+    text-align: right;
+}
+.time image{
+    margin-top: 2%;
+    height: 80%;
+    width: 6%;
+}
+.au_box{
+    margin-left: 3%;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.au_box_left{
+    width: 35%;
+    height: 83%;
+    background-color: #ffffff;
+    border-radius: 10%;
+}
+.au_box_left image{
+    height: 100%;
+    width: 100%;
+}
+.au_box_right{
+    margin-top: 4%;
+    margin-left: 2%;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.get_code{
+    margin-top: 3%;
+    width: 90% !important;
+    height:10%;
+    background: linear-gradient(to top, #7393bd, white);
+    font-weight: 500;
+}
+.wmnotice{
+    height: 150px;
+}
+.slopingside_left{
+    margin-top: 4%;
+    height:0px;
+    border: 1px solid #a5b0a2;
+    width: 25px;
+    transform:rotate(90deg);
+    -o-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+}
+.color{
+    height: 20%;
+    bottom:0px;
+    width: 100%;
+    position:fixed;
+    background:linear-gradient(to top, #4f75af, white);
+}

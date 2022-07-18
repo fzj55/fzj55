@@ -1,0 +1,79 @@
+<view class="ns">
+    <image src="/img/back.png" bindtap="back"></image>
+<view style="margin-top: 7%;color: black; margin-left: 9%; font-weight: 500;font-size: medium;">我 的 抽 签</view>
+</view>
+<view style="text-align: center;color:#acaaaa"> 请在抽中后半个小时内到订单处完成信息填写</view>
+<view class="ud_flex" wx:for="{{draw_list}}" wx:key="id">
+<block wx:if="{{item.status == 0}}">
+    <view style="height: 13%;">状态：未抽中</view>
+<view class="au_box">
+<view class="au_box_left">
+<block wx:if="{{item.place.place_id == 1}}">
+    <image src="/image/badminton.png"></image>
+</block>
+<block wx:else>
+    <image src="/image/swim.png"></image>
+</block>
+
+</view>
+<view class="au_box_right">
+    <view class="au_box_right_1" style="font-size: 13px;margin-top: 1%;">场馆号：{{item.place.name}}</view>
+    <view class="au_box_right_2" style="font-size: 11px;margin-top: 1%;">抽签开始时间：{{item.drawtime.draw_start_time}}</view>
+    <view style="font-size: 11px;margin-top: 1%;">抽签结束时间：{{item.drawtime.draw_end_time}}</view>
+    <view class="au_box_right_3;margin-top: 1%;" style="font-size: 13px">人数：{{item.book_num}}</view>
+</view>
+</view>
+<view style="height: 0%;border: #b9bcbe 1px solid; width: 90%; margin-bottom: 1%;margin-left: 5%;"></view>
+<view style="height: 20%; display: flex; flex-direction: row;">
+<!-- <button style="background-color: #7897c0;color: white;width: 35%;height: 90%;vertical-align:middle;text-align: center;line-height: 15px;"data-text="{{item.order_id}}"bindtap="To_write">填写信息</button> -->
+<!-- <view class="slopingside_left"></view> -->
+<!-- <button style="background-color:#ff0000;color: white;width: 35%;height: 90%;vertical-align:middle;text-align: center;line-height: 15px;" data-text="{{item.order_id}}" bindtap="cancel_fake">删除</button> -->
+</view>
+</block>
+<block wx:if="{{item.status == 2}}">
+    <view style="height: 13%;">状态：正在抽签中</view>
+<view class="au_box">
+<view class="au_box_left">
+<block wx:if="{{item.place.place_id == 1}}">
+    <image src="/image/badminton.png"></image>
+</block>
+<block wx:else>
+    <image src="/image/swim.png"></image>
+</block>
+
+</view>
+<view class="au_box_right">
+    <view class="au_box_right_1" style="font-size: 13px;margin-top: 1%;">场馆号：{{item.place.name}}</view>
+    <view class="au_box_right_2" style="font-size: 11px;margin-top: 1%;">抽签开始时间：{{item.drawtime.draw_start_time}}</view>
+    <view style="font-size: 11px;margin-top: 1%;">抽签结束时间：{{item.drawtime.draw_end_time}}</view>
+    <view class="au_box_right_3;margin-top: 1%;" style="font-size: 13px">人数：{{item.book_num}}</view>
+</view>
+</view>
+</block>
+<block wx:if="{{item.status == 1}}">
+<view style="height: 13%;">状态：抽中了</view>
+<view class="au_box">
+<view class="au_box_left">
+<block wx:if="{{item.place.place_id == 1}}">
+    <image src="/image/badminton.png"></image>
+</block>
+<block wx:else>
+    <image src="/image/swim.png"></image>
+</block>
+
+</view>
+<view class="au_box_right">
+    <view class="au_box_right_1" style="font-size: 13px;margin-top: 1%;">场馆号：{{item.place.name}}</view>
+    <view class="au_box_right_2" style="font-size: 11px;margin-top: 1%;">抽签开始时间：{{item.drawtime.draw_start_time}}</view>
+    <view style="font-size: 11px;margin-top: 1%;">抽签结束时间：{{item.drawtime.draw_end_time}}</view>
+    <view class="au_box_right_3;margin-top: 1%;" style="font-size: 13px">人数：{{item.book_num}}</view>
+</view>
+</view>
+<view style="height: 0%;border: #b9bcbe 1px solid; width: 90%; margin-bottom: 1%;margin-left: 5%;"></view>
+<view style="height: 20%; display: flex; flex-direction: row;">
+<!-- <button style="background-color: #7897c0;color: white;width: 35%;height: 90%;vertical-align:middle;text-align: center;line-height: 15px;"data-text="{{item.order_id}}"bindtap="To_write">填写信息</button>
+<view class="slopingside_left"></view> -->
+<!-- <button style="background-color:#ff0000;color: white;width: 35%;height: 90%;vertical-align:middle;text-align: center;line-height: 15px;" data-text="{{item.order_id}}" bindtap="cancel">取消预约</button> -->
+</view>
+</block>
+</view>

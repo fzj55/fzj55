@@ -1,0 +1,132 @@
+page{
+    background-color: #ffffff;
+    height: 100%;
+}
+.notice{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(226, 224, 224);
+}
+.ns {
+    width: 100%;
+    height: 10%;
+    text-align:center;
+    color: black;
+    font-weight:bold;
+    line-height:130px;
+    background:linear-gradient(to top, #ffffff , #4f75af);
+    top: 0;
+    }
+.notice .notice_1{
+    height: 300rpx;
+    width: 100%;
+    background-color: #005894;
+    border-radius: 0 0 40rpx 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.notice .notice_1 .notice_item{
+    font-size: 60rpx;
+    color: white;
+    font-weight: bold;
+    margin-top:50rpx;
+}
+/* notice_2 */
+.notice_2{
+    height: 400rpx;
+    width: 700rpx;
+    background-color: #cbd6e7;
+    margin:30rpx;
+    display: flex;
+}
+.notice_2 .notice_2_left{
+    padding: 40rpx;
+    display: flex;
+    align-items: center;
+}
+.notice_2 .notice_2_left image{
+    height: 150rpx;
+    width: 150rpx;
+    margin-bottom: 40rpx;
+}
+.notice_2_mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100%;
+}
+.notice_2_mid view{
+    width: 100%;
+    height: 30%;
+}
+.notice_2_mid image{
+    height: 70%;
+    width: 15%;
+    line-height:300px
+} 
+.notice_2_mid_item{
+    height: 100% !important;
+    width: 100% ;
+}
+.notice_2_mid_item navigator{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.notice_2_mid_item .item1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+/* notice_3 */
+.notice_3{
+    height: 400rpx;
+    width: 700rpx;
+    background-color: #cbd6e7;
+    margin:30rpx;
+    display: flex;
+}
+.notice_3 .notice_3_left{
+    padding: 40rpx;
+    display: flex;
+    align-items: center;
+}
+.notice_3 .notice_3_left image{
+    height: 150rpx;
+    width: 150rpx;
+    margin-bottom: 40rpx;
+}
+.notice_3_mid{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100%;
+}
+.notice_3_mid view{
+    width: 100%;
+    height: 30%;
+}
+.notice_3_mid image{
+    height: 70%;
+    width: 15%;
+    line-height:300px
+} 
+.notice_3_mid_item{
+    height: 100% !important;
+    width: 100% ;
+}
+.notice_3_mid .item1{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.notice_3_mid_item navigator{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}

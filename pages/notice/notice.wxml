@@ -1,0 +1,42 @@
+<view class="ns" style="height: 15%;">
+<view>公告</view>
+</view>
+<view style="height: 5%;"></view>
+<view style="height:80%">
+    <view class="notice_2">
+        <view class="notice_2_left">
+            <image src="/image/Badminton(1).png"></image>
+        </view>
+        <view class="notice_2_mid">
+    <view  wx:for="{{noticeList_1}}" wx:key="id">
+        
+        <view class="notice_2_mid_item">
+                <navigator url="/pages/notice_detail/notice_detail?content={{item.content}}">
+                <view class="item1">{{item.title}}</view>
+                <view style="height:40%">
+                <image src="/image/direction.png"></image>
+            </view>
+            </navigator>
+            </view>
+        </view>
+    </view>
+    </view>
+    <view class="notice_3">
+        <view class="notice_3_left">
+            <image src="/image/swim(1).png"></image>
+        </view>
+        <view class="notice_3_mid">
+            <view  wx:for="{{noticeList_2}}" wx:key="id">
+            <view class="notice_3_mid_item">
+                <navigator url="/pages/notice_detail/notice_detail?content={{item.content}}">
+                <view class="item1">{{item.title}}</view>
+                <view style="height:40%">
+                <image src="/image/direction.png"></image>
+            </view>
+                </navigator>
+            </view>
+        </view>
+        
+</view>
+</view>
+</view>

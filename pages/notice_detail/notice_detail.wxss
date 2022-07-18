@@ -1,0 +1,22 @@
+/* pages/notice_detail/notice_detail.wxss */
+page{
+    height: 100%;
+}
+    .ns {
+        width: 100%;
+        height: 20%;
+        text-align:center;
+        line-height: 155rpx; 
+        color: white;
+        font-weight:bold;
+        background:linear-gradient(to bottom, #4f75af, white);
+        display: flex;
+      }
+      .ns image{
+        margin-top: 5%;
+        height: 30rpx;
+        width: 30rpx;
+        position: fixed;
+        left: 20rpx;
+        top: 75rpx;
+    }

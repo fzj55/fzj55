@@ -1,0 +1,40 @@
+<view style="height: 100%;">
+<view class="ns"></view>
+<view class="login_container" style="font-weight: 600;" >用 户 登 录Login
+    <view class="itemView_1" style="font-weight: 500;">昵 称：
+    <view class="include">
+    <image class="img_1" src="/img/name.png"></image>
+    <input class="input_1" name="nickName" placeholder="自定义您喜欢的昵称"
+        bindinput="nickNameInput"/>
+        </view> 
+      </view>
+    <view class="itemView" style="font-weight: 500;">用 户 名：
+      <view class="include">
+        <image class="img_1" src="/img/account_number.png"></image>
+        <input class="input_2" name="userName" placeholder="请输入用户名（学号）"
+        bindinput="userNameInput"/>
+        </view>
+      </view>
+    <view class="itemView" style="font-weight: 500;">密 码：
+      <view class="include">
+        <image class="img_1" src="/img/code.png"></image>
+        <input class="input_3" password placeholder="请输入密码（身份证后四位）"
+        bindinput="passWdInput" />
+      </view>
+      </view>
+      <view class="itemView" style="font-weight: 500;">验 证 码：
+        <view class="include">
+          <image class="img_3" src="/img/security_code.png"></image>
+        <input class="input_4" placeholder="请输入验证码"
+        bindinput="passVcInput" />
+        <image class="img_2" bindtap='refreshImg' src="{{imgUrl}}"></image>
+        </view>
+        
+      </view>
+    <view class="viewName" style="background-color:white">
+      <button class="loginBtn" bindtap="loginBtnClick" type="primary">登 录</button>
+    </view>
+</view>
+<view class="color">
+</view>
+</view>

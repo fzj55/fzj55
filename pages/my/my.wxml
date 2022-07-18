@@ -1,0 +1,130 @@
+<view wx:if="{{!token}}">
+<view class="ns">我的
+</view>
+<view style="height: 80%;margin-top: 25%;">
+    <view class="notice_2" bindtap="To_login">
+        <view class="notice_2_left">
+          <image src="/image/default.png" ></image>
+        </view>
+        <view class="notice_2_right">
+        <view class="notice_2_mid_1">点此登录
+        </view>
+    <view class="notice_2_mid">
+    </view>
+  </view>
+    </view>
+    <view class="notice_3" bindtap="notlog_notice">
+        <view class="notice_3_all">
+        <view class="notce_3_top">
+            <view class="notce_3_top_left">
+            我的订单
+        </view>
+    </view>
+        <view class="notce_3_bottom">
+            <image src="/image/book_2.png"></image>
+            <image src="/image/finished.png"></image>
+            <image src="/image/draw.png"></image>
+        </view>
+            <view class="notce_3_bottom_2">
+            <view class="notce_3_bottom_2_left" >退补选</view>
+            <view class="notce_3_bottom_2_mid" >订单</view>
+            <view class="notce_3_bottom_2_right" >抽签</view>
+        </view>
+        </view>
+    </view>
+    <view class="notice_4" bindtap="notlog_notice">
+    <image src="/image/authonrization_code.png"></image>
+    <view> 我的授权码 </view>
+    </view>
+    <view class="notice_5">
+    <image src="/image/help.png"></image>
+    <view> 使用帮助 </view>
+    </view>
+
+    <view class="notice_5" >
+    <image src="/image/contact_us.png"></image>
+    <view> 联系我们 </view>
+    
+</view>
+    <view class="notice_5" bindtap="notlog_notice">
+    <image src="/image/residue_degree.png"></image>
+    <view> 本周场馆剩余次数 </view>
+    </view> 
+
+    <view class="notice_5" bindtap="notlog_notice">
+    <image src="/image/state.png"></image>
+    <view> 状态 </view>
+</view>
+    </view>
+</view>
+
+<view wx:else>
+<view class="ns">我的</view>
+<view style="height: 80%;margin-top: 25%;">
+    <view class="notice_2">
+        <view class="notice_2_left">
+        <block wx:if="{{avaurl}}">
+            <image src="{{avaurl}}" ></image>
+        </block>
+       <block wx:else>
+            <image src="/img/get.png" bindtap="get_avatarUrl"></image>
+        </block>
+        </view>
+        <view class="notice_2_right">
+        <view class="notice_2_mid_1">昵 称：{{nickname}}
+        </view>
+    <view class="notice_2_mid"> ID：{{studentnum}}
+    </view>
+  </view>
+    </view>
+    <view class="notice_3">
+        <view class="notice_3_all">
+        <view class="notce_3_top">
+            <view class="notce_3_top_left">
+            我的订单
+        </view>
+    </view>
+        <view class="notce_3_bottom">
+            <image src="/image/book_2.png" bindtap="to_choose"></image>
+            <image src="/image/finished.png" bindtap="to_order"></image>
+            <image src="/image/draw.png" bindtap="To_draw"></image>
+        </view>
+            <view class="notce_3_bottom_2">
+            <text class="notce_3_bottom_2_left" decode="{{true}}">&nbsp;&nbsp;补选</text>
+            <view class="notce_3_bottom_2_mid" >订单</view>
+            <text class="notce_3_bottom_2_right" decode="{{true}}">&nbsp;&nbsp;抽签</text>
+        </view>
+        </view>
+    </view>
+    <view class="notice_4" bindtap="authorization_code">
+    <image src="/image/authonrization_code.png"></image>
+    <view> 我的授权码 </view>
+    </view>
+    <view class="notice_5" bindtap="handle">
+    <image src="/image/help.png"></image>
+    <view> 使用帮助 </view>
+    </view>
+
+    <view class="notice_5" bindtap="my_detail">
+    <image src="/image/contact_us.png"></image>
+    <view> 联系我们 </view>
+    </view>
+
+    <view class="notice_5" bindtap="check_times">
+    <image src="/image/residue_degree.png"></image>
+    <view> 本周场馆剩余次数 </view>
+    </view> 
+
+    <view class="notice_6">
+    <image src="/image/state.png"></image>
+    <view> 状态 </view>
+    <view wx:if="{{authority_id == 1}}" style="font-size: large;font-weight: 600;text-align: end;">管理员</view>
+    <view wx:if="{{authority_id == 0}}"style="font-size: large;font-weight: 600;text-align: end;">正常</view>
+    <view wx:if="{{authority_id == -1}}"style="font-size: large;font-weight: 600;text-align: end;">黑名单</view>
+    <view style="width: 60px;"></view>
+    </view>
+    <button style=" width: 70%;height: 40px;margin-top:14px;background-color: #8293ac;font-weight: 500;"bindtap="dropOut">退出登录</button>
+    <view style="height:100px"></view>
+</view>
+</view>
+

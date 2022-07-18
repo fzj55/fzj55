@@ -1,0 +1,6 @@
+<view class="ns">
+  <image src="/img/back.png" bindtap="back"></image>
+</view>
+<view>
+    {{notice_detail.content}}
+</view>

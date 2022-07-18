@@ -1,0 +1,40 @@
+<wxs module="filters" src="/utils/util.wxs"></wxs>
+<view class="ns">抽签
+</view>
+<view class="a">
+<view style="text-align: center;font-size: large;font-weight: 600;">公告</view>
+<view class="c">{{noticeList_1}}</view>
+</view>
+<view style="height: 10%;"></view>
+<view wx:if="{{!not}}" style="width: 100%;height: 100%;">
+    <image style="position: absolute; width: 50%; height: 30%;top: 20%;left: 25%;" src="/image/no.png"></image>
+    <view style="position: absolute;top: 55%;left: 26%;color: #afafaf;font-size: 30px;">暂无场地开放</view>
+</view>
+<view wx:else style="height: 100%;width: 100%;">
+<swiper current="{{index}}" circular previous-margin="35rpx" next-margin="35rpx" bindchange="changehandle">
+    <swiper-item wx:for="{{openplace_list}}" wx:key="id" >
+    <view class="book_1">
+    <view class="book_1_pn">{{item.name}}
+    <image class="im" src="/image/ref.png" bindtap="onRefresh"></image>
+    </view>
+        <image src="{{item.img}}"></image>  
+        <view wx:if="{{maxMember}}">
+        <view style="margin-left: 10%;margin-top: 3%; font-size: 15px; color: #7293bd; font-weight: 600;">人数</view>
+         <!-- 单选框 -->
+	<view class="pages_box">
+		<block wx:for="{{maxMember}}" wx:key="index" wx:if="{{index<100}}">
+			<view bindtap="pagesFn" class="{{(memberNum)%100==(index+1)%100?'active':''}}" data-number="{{tyindex+index}}" data-type="{{(index)%6}}">{{tyindex+index}}</view>
+		</block>
+	</view>
+    </view>
+    <view wx:else>
+    <view style="margin-left: 10%;margin-top: 3%; font-size: 15px; color: #7293bd; font-weight: 600;">未开放</view>
+    <view style="margin-left: 10%;margin-top: 3%; font-size: 15px; color: #7293bd; font-weight: 600;">开放时间：{{filters.substring(item.draw_start_time,0,10)}}</view>
+    <view style="margin-left: 40%;margin-top: 3%; font-size: 15px; color: #7293bd; font-weight: 600;">{{filters.substring(item.draw_start_time,11,16)}}-{{filters.substring(item.draw_end_time,11,16)}}</view>
+    </view>
+        <!-- 结束 -->
+        <button class="draw"data-text='{{item.id}}' bindtap="Draw">抽签</button>
+    </view>
+    </swiper-item>
+</swiper>
+</view>

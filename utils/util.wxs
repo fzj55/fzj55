@@ -1,0 +1,11 @@
+var filters ={
+    substring:function(val,start,end){
+        if(val.length == 0 || val == undefined){
+            return
+        }
+        return val.substring(start,end);
+    }
+}
+module.exports={
+    substring:filters.substring
+}

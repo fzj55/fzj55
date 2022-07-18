@@ -1,0 +1,25 @@
+<view class="ns">
+    <image src="/img/back.png" bindtap="back"></image>
+<view style="margin-top: 7%;color: black; margin-left: 9%; font-weight: 500;font-size: medium;">本 周 场 馆 剩 余 次 数</view>
+</view>
+<view class="ud_flex" wx:for="{{real_list}}" wx:key="id">
+    <view style="height: 13%;"></view>
+<view class="au_box">
+<view class="au_box_left">
+<block wx:if="{{item.name == '羽毛球场'}}">
+    <image src="/image/badminton.png"></image>
+</block>
+<block wx:else>
+    <image src="/image/swim.png"></image>
+</block>
+</view>
+<view class="au_box_right">
+    <view class="au_box_right_1" style="font-size: 17px;margin-top: 10%;">场地：{{item.name}}</view>
+    <view class="au_box_right_2" style="font-size: 20px;margin-top: 1%;">剩余次数：{{item.times}}</view>
+    <view style="font-size: 11px;margin-top: 1%;"></view>
+    <view class="au_box_right_3;margin-top: 1%;" style="font-size: 13px"></view>
+</view>
+</view>
+</view>
+<view class="color">
+</view>

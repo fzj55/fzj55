@@ -1,0 +1,51 @@
+<wxs module="filters" src="/utils/util.wxs"></wxs>
+<view wx:if="{{!isShow}}">
+<view class="ns" >历史订单
+    <image src="/img/back.png" bindtap="back"></image>
+</view>
+    <view class="history_1" wx:for="{{stadium}}" wx:key="user_id">
+                <view class="history_name">{{item.place.name}}</view>
+                <view class="history_mid">
+                <view class="history_matter">
+                    <view class="history_Time">
+                        <view class="history_time">{{filters.substring(item.timetable.start_time,0,10)}}</view>
+                        <view class="history_time">{{filters.substring(item.timetable.start_time,11,16)}}-{{filters.substring(item.timetable.end_time,11,16)}}</view>
+                    </view>
+                    <view class="history_field">场地</view>
+                    <view class="history_number">场地人数 {{item.book_num}} 人 
+                </view>
+            </view>
+            <view class="history_book">
+                <view wx:if="{{item.timetable.book_end_time > time && item.parent_oder_id == '-1' }}"  class="btn2" data-gid='{{item.order_id}}' bindtap="book_del"> 取消预订 </view>
+                <view style="height: 10%;"></view>
+                <view  wx:if="{{item.timetable.book_end_time > time && item.parent_oder_id == '-1' }}" class="btn2" style="background-color: #7897c0;" data-text="{{item.order_id}}"bindtap="To_write">查看并填写</view>
+            </view>
+        </view>
+        <view class="history_book" wx:if="{{item.place.name[0]=='游'}}">
+              <view wx:if="{{time < item.timetable.end_time}}" class="btn" data-starttime="{{item.timetable.start_time}}" data-endtime="{{item.timetable.end_time}}" data-placename="{{item.place.name}}" data-ticketid="{{item.ticketid}}" bindtap="handleshow"> 展示门票 </view>
+          </view>
+    </view>
+</view>
+
+<view class="showorer" wx:if="{{isShow}}">
+ <view class="{{(is_dark)?'dark':'blue'}}">
+ <view style="height: 15%;"></view>
+ <view class="include">
+    <image src='/image/swim.png'></image>
+    <view style="height: 10%;"></view>
+  <view style="text-align: center; font-size: 30px;">{{show_placename}}</view>
+  <view style="text-align: center; font-size: 24px;">学号:{{ show_studentname }}</view>
+  <view style="text-align: center; font-size: 24px;" wx:if="{{show_ticketid}}">序号：{{ show_ticketid }}</view>
+  <view style="text-align: center; font-size: 24px;" wx:else>序号：未分配</view>
+  <view style="height: 3%;"></view>
+  <view style="text-align: center; font-size: 18px;">场地时间:</view>
+  <view style="text-align: center;">{{show_starttime}}</view>
+  <view style="text-align: center;">{{show_endtime}}</view>
+
+  <view style="width:50%;padding-left: 23%;padding-top: 4%;">
+  <css-animation class="animation-qi" width="300" height="300" count="24" duration="2" url="https://test.wyu-pesystem.com/static/img/3.png"></css-animation>
+</view>
+  <view><button bindtap="handleback" class="get_code">返回</button></view>   
+</view>
+</view>
+</view>

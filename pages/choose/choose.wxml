@@ -1,0 +1,28 @@
+<wxs module="filters" src="/utils/util.wxs"></wxs>
+<view class="ns">
+    <image src="/img/back.png" bindtap="back"></image>
+<view style="margin-top: 7%;color: black; margin-left: 9%; font-weight: 500;font-size: medium;">补 选</view>
+</view>
+<view class="ud_flex" wx:for="{{openplace_list}}" wx:key="id">
+<view class="au_box">
+<view class="au_box_left">
+<block wx:if="{{item.id == 1}}">
+    <image src="/image/badminton.png"></image>
+</block>
+<block wx:else>
+    <image src="/image/swim.png"></image>
+</block>
+</view>
+<view class="au_box_right">
+<view>场馆名：{{item.name}}</view>
+<view wx:if="{{item.book_start_time}}" style="height: 50%;">
+<view>补选时间</view>
+<view>{{filters.substring(item.book_start_time,0,10)}}</view>
+{{filters.substring(item.book_start_time,11,16)}}-{{filters.substring(item.book_end_time,11,16)}}</view>
+<view style="height: 40%;" wx:else></view>
+<button style="height: 80rpx !important;background-color:#81c8ad;line-height:40rpx;"data-text="{{item.id}}"bindtap="To_choose">补选</button>
+</view>
+</view>
+</view>
+<view class="color">
+</view>

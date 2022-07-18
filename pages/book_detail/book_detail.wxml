@@ -1,0 +1,106 @@
+
+<view class="ns">预约
+    <image src="/img/back.png" bindtap="back"></image>
+</view>
+<view style="height: 120rpx;"></view>
+<!-- 开放时间 -->
+<mp-sticky offset-top="0">
+<view class="open_times">
+    <image src="/img/time.png" ></image>
+
+    <view class="time_1">
+        <view wx:for="{{placeTimeList}}" wx:key="{{index}}">
+
+<view class="{{index%2==0?'date_dark':'date_light' }}">{{item[0]}}
+<view class="date_font">{{item[1]}}</view>
+</view>
+</view>
+    </view>
+</view>
+
+
+<!-- 开放时间 -->
+<!-- 开放地点 -->
+<view class="site">
+<view class="open_place_left">
+    <view class="place"><text>场号</text>
+    </view>
+    <view wx:for="{{placeNumList}}" wx:key="{{index}}">
+
+    <view class="{{index%2==0?'place_dark':'place_light' }}">{{item}}</view>
+</view>
+</view>
+<view class="surplus_0">
+<view class="surplus">
+    <view style="height: 55rpx;margin-bottom: 21rpx;" wx:for="{{openlist}}" wx:key="id">
+        <view wx:if="{{item.id == '0'}}">
+        <button class="field"></button>
+        </view>
+        <view wx:else id='{{index}}' data-text='{{item.id}}' bindtap='record_time'>
+        <block wx:if="{{index==clickId}}">
+        <button class='field_dark' style="background-color: #698bb8;">
+        {{item.num}}
+        </button>
+        </block>
+        <block wx:else>
+        <button class='field_dark'>
+          {{item.num}}
+        </button>
+        </block>
+        </view>
+    </view>
+</view>
+</view>
+</view>
+</mp-sticky>
+<!-- 开放地点 -->
+
+<!-- 人数 -->
+<!-- 固定栏 -->
+<view class="fixed">
+<view class="number">
+    <view class="num">
+        <view class="frame">
+        <image src="/img/num.png"></image>
+        </view>
+        <text style="width: 40px;">人数</text>
+        <view class="colors">
+    <view class="color">
+        <view class="square_1"></view>
+        <view class="item">未开放</view>
+    </view>
+    <view class="color">
+        <view class="square_2"></view>
+        <view class="item_0">已开放</view>
+    </view>
+    <view class="color">
+        <view class="square_3"></view>
+        <view class="item_0">已选中</view>
+    </view>
+</view>
+    </view>
+</view>
+<view class="number_">
+    <view wx:for="{{set_book_num}}" wx:key="{{index}}">
+        <view id='{{index}}' data-text='{{item+1}}' bindtap='record_num'>
+        <block wx:if="{{index==clickId_2}}" >
+        <button class='num_1' style="background-color: #698bb8;">
+        {{item+1}}
+        </button>
+        </block>
+        <block wx:else>
+        <button class='num_1'>
+        {{item+1}}
+        </button>
+        </block>
+        </view>
+    </view>
+</view>
+<!-- 提交 -->
+<view class="submit" bindtap="submit">
+<button>
+    <image  src="/img/submit.png"></image>
+    提 交
+</button>
+</view>
+</view>

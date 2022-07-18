@@ -1,0 +1,33 @@
+data:
+code: 1
+data:
+detail: Array(12)
+0: {book_frequency: 2, id: "3", img: null, is_open: true, name: "羽毛球1号场", …}
+1: {book_frequency: 2, id: "4", img: null, is_open: true, name: "羽毛球2号场", …}
+2: {book_frequency: 2, id: "5", img: null, is_open: true, name: "羽毛球3号场", …}
+3: {book_frequency: 2, id: "6", img: null, is_open: true, name: "羽毛球4号场", …}
+4: {book_frequency: 2, id: "7", img: null, is_open: true, name: "羽毛球5号场", …}
+5: {book_frequency: 2, id: "8", img: null, is_open: true, name: "羽毛球6号场", …}
+6: {book_frequency: 2, id: "9", img: null, is_open: true, name: "羽毛球7号场", …}
+7: {book_frequency: 2, id: "10", img: null, is_open: true, name: "羽毛球8号场", …}
+8: {book_frequency: 2, id: "11", img: null, is_open: true, name: "羽毛球9号场", …}
+9: {book_frequency: 2, id: "12", img: null, is_open: true, name: "羽毛球10号场", …}
+10: {book_frequency: 2, id: "13", img: null, is_open: true, name: "羽毛球11号场", …}
+11: {book_frequency: 2, id: "14", img: null, is_open: true, name: "羽毛球12号场", …}
+length: 12
+nv_length: (...)
+__proto__: Array(0)
+drawtime:
+draw_end_time: "2022-04-28 22:00:00"
+draw_start_time: "2022-04-28 08:00:00"
+id: "7da5596b-6ebe-4163-bd41-bb7d82f65b97"
+place_id: "1"
+__proto__: Object
+time: Array(3)
+0: "2022-04-29 21:53-22:53"
+1: "2022-04-29 20:13-20:15"
+2: "2022-04-29 23:52-23:53"
+3: "2022-04-29 23:52-23:53"
+4: "2022-04-29 23:52-23:53"
+length: 3
+nv_length: (...)

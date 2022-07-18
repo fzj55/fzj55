@@ -1,0 +1,32 @@
+<view class="ns">
+  <image src="/img/back.png" bindtap="back"></image>
+</view>
+<view class="login_container" style="font-weight: 600;" >填 写 授 权 码
+    <view class="itemView_1" style="font-weight: 500;">
+    <view class="include">
+    <image class="img_1" src="/image/authonrization_code.png"></image>
+    <input class="input_1" name="nickName" placeholder="请输入联系人1的授权码"
+        bindinput="nickNameInput"/>
+        </view> 
+      </view>
+    <view class="itemView" style="font-weight: 500;">
+      <view class="include">
+        <image class="img_1" src="/image/authonrization_code.png"></image>
+        <input class="input_2" name="userName" placeholder="请输入联系人2的授权码"
+        bindinput="userNameInput"/>
+        </view>
+      </view>
+    <view class="itemView" style="font-weight: 500;">
+      <view class="include">
+        <image class="img_1" src="/image/authonrization_code.png"></image>
+        <input class="input_3" name="password" placeholder="请输入联系人3的授权码"
+        bindinput="passWdInput" />
+      </view>
+      </view>
+    <view class="viewName" style="background-color:white">
+      <button class="loginBtn" bindtap="loginBtnClick" type="primary">提 交</button>
+    </view>
+</view>
+<view class="color">
+</view>
+

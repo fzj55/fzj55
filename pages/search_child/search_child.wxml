@@ -1,0 +1,20 @@
+<view class="ns">
+  <image src="/img/back.png" bindtap="back"></image>
+</view>
+<view class="login_container" style="font-weight: 600;" >邀 请 的 好 友
+    <view wx:if="{{index}}">
+    <view wx:for="{{stadium}}" wx:key="id" class="itemView_1" style="font-weight: 500;">
+    <view>好友</view>
+    <view class="include">
+    <view>学号:{{item.belong_username}}</view>
+        </view> 
+        <button style="height: 60rpx;background-color: #e63e31;line-height: 30rpx;margin-top: 2%;color: #f8e5e5;width: 50%;" data-text="{{item.childorder_id}}" bindtap="del_child">删除</button>
+    </view>
+</view>
+    <view style="margin-top: 20%;" wx:else>暂无添加，快点击下方填写吧</view>
+    <view class="viewName" style="background-color:white">
+      <button class="loginBtn" bindtap="To_write" type="primary">进入填写</button>
+    </view>
+</view>
+<view class="color">
+</view>

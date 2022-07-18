@@ -1,0 +1,210 @@
+.ns {
+  width: 100%;
+  height: 10%;
+  text-align:center;
+  color: black;
+  font-weight:bold;
+  line-height:130px;
+  background:linear-gradient(to top, #ffffff , #4f75af);
+  position: fixed;
+  top: 0;
+  }
+  .ns view{
+    height:10%;
+    padding-bottom: 10%;
+  }
+  .ns .item{
+    padding-top: 7%;
+    width: 10%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+  }
+  .notice .notice_1{
+    height: 150rpx;
+    width: 100%;
+    background-color: #f66e5d;
+    border-radius: 0 0 40rpx 40rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .notice .notice_1 .notice_item{
+    font-size: 30rpx;
+    color: black;
+    margin-top:50rpx;
+  }
+  .notice_2{
+    height: 150rpx;
+    width: 600rpx;
+    background-color: #6fa8e0;
+    margin-top: 5%;
+    margin-left: 10%;
+    display: flex;
+    box-shadow: -2rpx -7rpx 2rpx 2rpx #6983a5;
+    border-radius: 20rpx;
+  }
+  
+  .notice_2 .notice_2_left{
+    width: 100rpx;
+    padding: 40rpx;
+    display: flex;
+    align-items: center;
+  }
+  
+  .notice_2 .notice_2_left image{
+    height: 100rpx;
+    width: 300px;
+    margin-bottom: 20rpx;
+  }
+  .notice_2_mid_1{
+    padding-top: 15%;
+    width: 300rpx;
+    height: 10rpx;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .notice_2_mid{
+    padding-top: 15%;
+    width: 300rpx;
+    height: 10rpx;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  /* .notice_2_mid image{
+    height: 25rpx;
+    width: 25rpx;
+  }  */
+  .notice_2_mid_item{
+    display: flex;
+    margin:45rpx;
+    align-items: center;
+  }
+  .notice_2_mid_item .item1{
+    font-size: 40rpx;
+    margin-right: 20rpx;
+    
+  }
+  /* notice_3 */
+  .notice_3{
+    height: 200rpx;
+    width: 710rpx;
+    background: linear-gradient(to bottom, #6fa8e0, #b6d1f2);
+    margin-top: 8%;
+    margin-left: 3%;
+    display: flex;
+    box-shadow: -2rpx -6rpx 2rpx 2rpx #6983a5;
+    border-radius: 20rpx;
+  }
+  .notice_3 .notice_3_all{
+    width: 100%;
+    align-items: center;
+  }
+  .notce_3_top{
+    width: 100%;
+    height: 20rpx;
+    display: flex;
+    text-align: left;
+    font-size: 14px;
+    flex-direction: row;
+    margin-left: 3%;
+    margin-bottom: 5%;
+  }
+  .notce_3_top_left{
+    width:80%
+  }
+  .notce_3_bottom{
+    width: 78%;
+    height: 80rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left: 10%;
+  }
+  .notce_3_bottom image{
+          width:15%;
+          height:90%;
+  }
+  .notce_3_bottom_2{
+    width: 75%;
+    height: 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin-left: 10%;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  /* .notce_3_bottom_2 .notce_3_bottom_2_right{
+    
+  } */
+  .notice_4{
+    height: 80rpx;
+    width: 710rpx;
+    background-color: #b6d1f2;
+    margin-top: 8%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10rpx;
+  }
+  .notice_4 image{
+      width:8%;
+      height:60%;
+      margin-left: 3%;
+      margin-top: 2%;
+  }
+  .notice_4 view{
+    width:30%;
+    height:60%;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+  .notice_5{
+    height: 80rpx;
+    width: 710rpx;
+    background-color: #b6d1f2;
+    margin-top: 4%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10rpx;
+  }
+  .notice_5 image{
+      width:8%;
+      height:60%;
+      margin-left: 3%;
+      margin-top: 2%;
+  }
+  .notice_5 view{
+    width:50%;
+    height:60%;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+  .notice_6{
+    height: 80rpx;
+    width: 710rpx;
+    background-color: #b6d1f2;
+    margin-top: 4%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10rpx;
+  }
+  .notice_6 image{
+      width:10%;
+      height:60%;
+      margin-left: 3%;
+      margin-top: 2%;
+  }
+  .notice_6 view{
+    width:50%;
+    height:60%;
+    margin-left: 3%;
+    margin-top: 2%;
+  }

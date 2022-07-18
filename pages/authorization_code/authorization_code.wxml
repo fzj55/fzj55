@@ -1,0 +1,32 @@
+<view class="ns">
+    <image src="/img/back.png" bindtap="back"></image>
+<view style="margin-top: 7%;color: black; margin-left: 9%; font-weight: 500;">授 权 码</view>
+</view>
+<view class="login_container">
+<view style="height: 10%;"></view>
+<view class="au_box">
+<view class="au_box_left">
+<image src="/img/key.png"></image>
+</view>
+<view class="au_box_right">
+    <view style="height:10%"></view>
+    <view class="au_box_right_1" style="font-size: 18px;">授 权 码:</view>
+    <input type="text" readonly value="{{au_code}}"/>
+    <view class="au_box_right_2" style="font-size: 17px">有 效 期:五分钟</view>
+</view>
+</view>
+<button class="get_code" bindtap="getAu_code">获 取 授 权 码</button>
+<view style="height: 10%;"></view>
+<view class="wm_notice">
+    <view class="slopingside_left"></view>
+    <view class="slopingside_right"></view>
+    <view class="content">
+    <view style="height: 3%;"></view>
+    <view style="text-align : center;font-weight: 600;font-size: 17px;">温 馨 提 示</view>
+    </view>
+</view>
+
+</view>
+<view class="color">
+</view>
+
